@@ -408,5 +408,3 @@ def training_function(text_encoder, vae, unet):
 accelerate.notebook_launcher(training_function, args=(text_encoder, vae, unet), num_processes=1)
 with torch.no_grad():
     torch.cuda.empty_cache()
-
-demo.launch()
